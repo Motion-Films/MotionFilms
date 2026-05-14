@@ -12,9 +12,6 @@ import { Link } from 'react-router-dom';
 import Header from '../elements/header';
 import Footer from '../elements/footer';
 
-//importação de imagens
-import img_historia from '../img/fundo-historia.PNG';
-
 //importação de vídeos
 import video_fundo from '../videos/fundo-app3.mp4';
 import videoCam from '../videos/animCam.mp4';
