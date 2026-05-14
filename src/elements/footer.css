@@ -1,0 +1,74 @@
+#contato {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#contato img {
+    width: 40px;
+}
+
+#ctn-icons {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+}
+
+#direitos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icon-rede {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #272727;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.icon-rede img {
+    height: 12px;
+}
+
+hr {
+    margin: 30px 0;
+    border: none;
+    height: 1px;
+    background-color: #181818;
+}
+
+#logo-rodape {
+    border-radius: 50%;
+}
+
+#redes-sociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#rodape {
+    background-color: #090909;
+    color: #b3b3b3;
+    padding: 40px 80px;
+    height: 60vh;
+}
+
+#rodape-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+    #rodape-infos {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

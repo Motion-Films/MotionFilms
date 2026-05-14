@@ -1,0 +1,322 @@
+@font-face {
+    font-family: 'Aristotelica Pro';
+    src: url('../../public/fonts/AristotelicaPro.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+canvas {
+    background-color: #FFF;
+    width: 50%;
+}
+
+::-webkit-scrollbar {
+    background-color: #202020;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #838383;
+    border-radius: 10px;
+}
+
+.area-video {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+}
+
+#principal-app {
+    position: fixed;
+    width: 100%;
+}
+
+#ctn-video {
+    height: 100vh;
+    width: 100%;
+    transition: transform .8s;
+}
+
+#ctn-video::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#ctn-video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#sob-principal {
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+#sob-principal h1 {
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4em;
+    text-shadow: 0 0 10px #a8a8a8;
+}
+
+#sob-principal p {
+    color: #FFF;
+    text-align: center;
+}
+
+#pos-main {
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    top: 100vh;
+}
+
+#pos-main-content {
+    padding: 80px 40px;
+}
+
+.link-visite {
+    width: max-content;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px 40px;
+    border-radius: 8px;
+    font-family: inherit, sans-serif;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 3px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: transform .4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-visite:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.link-visite:hover::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 100%;
+    animation: slide .5s;
+}
+
+@keyframes slide {
+    0% {
+        left: -100%
+    }
+
+    30% {
+        left: 0%
+    }
+
+    70% {
+        left: 0%
+    }
+
+    100% {
+        left: 100%
+    }
+}
+
+/*section-carrossel*/
+.card {
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 14px;
+}
+
+.card p {
+    color: #4b4b4b;
+    width: 100%;
+}
+
+#sec-carrossel {
+    background-color: #FFF;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#ctn-carrossel-imgs {
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    animation: scrollX 45s linear infinite;
+}
+
+@keyframes scrollX {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50.3%);
+    }
+}
+
+#ctn-carrossel-imgs article {
+    height: max-content;
+}
+
+/*seção história*/
+#ctn-historia {
+    width: 70%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/fundo-historia.png');
+    background-position: center;
+    color: #FFF;
+    padding: 60px;
+    position: relative;
+    bottom: 40px;
+    border-radius: 8px;
+}
+
+.titulo-historia {
+    font-size: 3em;
+    font-family: Montserrat, sans-serif;
+    text-shadow: 0 0 10px #000000;
+    opacity: 0;
+    transition: opacity 1s, transform .7s;
+    transform: translateY(20px);
+}
+
+.titulo-historia.anim {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#ctn-historia button {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 18px 30px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 2px solid #4e4e4e;
+    color: #FFF;
+    transition: transform .4s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#ctn-historia button::before {
+    content: ">";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    width: 20px;
+    height: 20px;
+    color: #000;
+    background-color: #FFF;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#ctn-historia button:hover {
+    transform: scale(1.03);
+}
+
+#historia {
+    margin: 60px 0;
+    display: flex;
+    align-items: center;
+}
+
+.imagem {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+#grid-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#grid-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#sec-historia {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#sec-historia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#sec-historia #ctn-img {
+    background-image: url('../img/fundo-historia.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#text-historia {
+    width: 50%;
+}
+
+.canvas-3d {
+    width: 50%;
+    height: 500px;
+}
+
+#text-historia strong {
+    color: #ff9665;
+}
+
+@media screen and (max-width: 480px) {
+    #ctn-historia {
+        width: 100%;
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    #historia {
+        flex-direction: column;
+    }
+
+    #text-historia,
+    .canvas-3d {
+        width: 100%;
+    }
+}
