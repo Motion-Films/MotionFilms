@@ -1,9 +1,5 @@
 import './App.css'
 import { useEffect, useRef } from "react";
-import Lenis from "@studio-freight/lenis";
-
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Scene from '../assets/scenePage';
 
 import { Link } from 'react-router-dom';
@@ -14,7 +10,6 @@ import Footer from '../elements/footer';
 
 //importação de vídeos
 import video_fundo from '../videos/fundo-app3.mp4';
-import videoCam from '../videos/animCam.mp4';
 
 //Fotos carrossel
 import foto1 from '../img/carrossel/foto1.jpg';
@@ -81,13 +76,12 @@ function App() {
       des: "Viveram um dia mágico, onde o amor foi o grande protagonista. A harmonia do casal e a emoção da cerimônia criaram memórias inesquecíveis, registradas com sensibilidade e cuidado."
     }
   ]
-  const area_video = useRef();
+
   const video = useRef();
   const observerRef = useRef([]);
   const mainRef = useRef();
-
-  const videoRef = useRef();
   const sectionRef = useRef();
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

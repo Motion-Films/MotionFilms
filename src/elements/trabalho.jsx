@@ -2,11 +2,6 @@ import { useRef, useEffect, useState } from 'react';
 
 import { Wrapper, TituloH2 } from '../elements/styled';
 
-//Importação de imagens casamento
-import c1 from '../img/casamento/imagem1.jpg';
-import c2 from '../img/casamento/imagem2.jpg';
-import c3 from '../img/casamento/imagem3.jpg';
-
 //Casamentos
 const casamentos = Object.values(
     import.meta.glob('../img/galeria/casamentos/*.{png,jpg,jpeg,webp}', {
@@ -59,21 +54,6 @@ const ensaios = Object.values(
     })
 );
 
-//Importação de imagens casamento
-import a1 from '../img/aniversario/imagem1.jpg';
-import a2 from '../img/aniversario/imagem2.jpg';
-import a3 from '../img/aniversario/imagem3.jpg';
-
-//Importação de imagens casamento
-import e1 from '../img/ensaio/imagem1.jpg';
-import e2 from '../img/ensaio/imagem2.jpg';
-import e3 from '../img/ensaio/imagem3.jpg';
-
-const img_casamento = [c1, c2, c3];
-const img_15_sub1 = [a1, a2, a3];
-const img_15_sub2 = [c1, c2, c3];
-const img_ensaio = [e1, e2, e3];
-
 const objTrabalho = [
     {
         nome: "Casamentos",
@@ -116,14 +96,10 @@ function Trabalho() {
     const [loading, setLoading] = useState([5, 5, 5, 5, 5]);
     const textRef = useRef([]);
     const quadros = useRef([]);
-    const locBt = useRef([]);
     const ctn_full = useRef();
     const img_full = useRef([]);
     const [fullscreen, setFullscreen] = useState(false);
 
-    function testando() {
-        console.log("ola");
-    }
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach((entry) => {

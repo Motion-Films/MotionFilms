@@ -10,8 +10,6 @@ import a7 from './a7iii_3D6.glb';
 
 export default function Scene({ mainRef }) {
     const mountRef = useRef();
-    const initialized = useRef(false);
-    const principalRef = useRef();
 
     useEffect(() => {
         const container = mountRef.current;
@@ -52,7 +50,6 @@ export default function Scene({ mainRef }) {
             const loader = new GLTFLoader();
 
             let model;
-            let pivot
             console.log(a7);
 
             loader.load(a7, (gltf) => {
@@ -90,11 +87,6 @@ export default function Scene({ mainRef }) {
             // LOOP
             function animate() {
                 animationId = requestAnimationFrame(animate);
-
-                // teste: gira automaticamente (remove depois)
-                /*if (model) {
-                    model.rotation.y += 0.01;
-                }*/
 
                 renderer.render(scene, camera);
             }

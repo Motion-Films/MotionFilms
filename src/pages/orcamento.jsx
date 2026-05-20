@@ -1,12 +1,8 @@
 import './orcamento.css';
-import { useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 
 //3D
 import '@google/model-viewer';
-import Scene from '../assets/scenePage';
-
-import a7 from '../assets/a7iii_3D.glb';
 
 //Importação de elementos
 import Header from '../elements/header';
@@ -39,14 +35,6 @@ function Orcamento() {
                         <TituloH2>Envie uma mensagem</TituloH2>
                         <form onSubmit={(e) => {
                             e.preventDefault();
-                            /*
-                            console.log(dataRef.current.value);
-                            const data = dataRef.current.value.split("-");
-                            console.log(data.current);
-                            if (dataRef.current) {
-                                console.log("é isso...");
-                                dataRef.current = `${data[2]}/${data[1]}/${data[0]}`;
-                            }*/
                             let dataFinal;
                             let dataFormat;
                             if (dataRef.current.value) {

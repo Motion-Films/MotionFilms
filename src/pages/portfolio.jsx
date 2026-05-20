@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 //Importação de elementos
 import Header from '../elements/header';
 import Footer from '../elements/footer';
-import { Wrapper, TituloH2 } from '../elements/styled';
 import Trabalho from '../elements/trabalho';
 
 function Portfolio() {
