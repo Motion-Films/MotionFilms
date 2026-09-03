@@ -1,12 +1,16 @@
 {
     "rewrites": [
         {
-            "source": "/((?!sitemap.xml|robots.txt).*)",
-            "destination": "/index.html"
-        },
-        {
             "source": "/canais",
             "destination": "https://motion-films-canais.vercel.app/"
+        },
+        {
+            "source": "/canais/:path*",
+            "destination": "https://motion-films-canais.vercel.app/:path*"
+        },
+        {
+            "source": "/((?!sitemap.xml|robots.txt).*)",
+            "destination": "/index.html"
         }
     ]
 }
